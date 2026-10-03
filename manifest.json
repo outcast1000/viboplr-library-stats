@@ -1,10 +1,12 @@
 {
   "id": "library-stats",
   "name": "Library Statistics",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "author": "Viboplr",
   "description": "A dashboard of your library composition, listening patterns, and top charts — built from your local library and play history.",
-  "minAppVersion": "0.9.136",
+  "minAppVersion": "1.0.85",
+  "runtime": "worker",
+  "permissions": ["library:read", "playback:control"],
   "icon": "M18 20V10M12 20V4M6 20v-6",
   "viewHeader": {
     "subtitle": "Library composition, listening patterns and top charts"
