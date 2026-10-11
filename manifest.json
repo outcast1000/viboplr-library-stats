@@ -1,7 +1,7 @@
 {
   "id": "library-stats",
   "name": "Library Statistics",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "author": "Viboplr",
   "description": "A dashboard of your library composition, listening patterns, and top charts — built from your local library and play history.",
   "minAppVersion": "1.0.85",
@@ -10,48 +10,14 @@
     "library:read",
     "playback:control"
   ],
+  "permissionReasons": {
+    "library:read": "Build the statistics from your tracks, tags, play history and most-played charts",
+    "playback:control": "Play or queue tracks from the Top charts"
+  },
   "icon": "M18 20V10M12 20V4M6 20v-6",
   "viewHeader": {
     "subtitle": "Library composition, listening patterns and top charts"
   },
-  "apiUsage": [
-    {
-      "api": "library.getTracks",
-      "reason": "Aggregate library composition (format, decade, duration, size, likes)"
-    },
-    {
-      "api": "library.getTags",
-      "reason": "Genre/tag distribution"
-    },
-    {
-      "api": "library.getHistoryPlayCount",
-      "reason": "Size the play-history progress bar"
-    },
-    {
-      "api": "library.getHistoryPlaysPage",
-      "reason": "Stream play history in pages to compute listening patterns without freezing the UI"
-    },
-    {
-      "api": "library.getMostPlayed",
-      "reason": "Top tracks (all-time and rolling windows)"
-    },
-    {
-      "api": "library.getMostPlayedArtists",
-      "reason": "Top artists by play count"
-    },
-    {
-      "api": "playback.playTracks",
-      "reason": "Play track(s) from the Top charts"
-    },
-    {
-      "api": "playback.insertTracks",
-      "reason": "Enqueue track(s) from the Top charts"
-    },
-    {
-      "api": "storage.set",
-      "reason": "Cache the computed statistics snapshot"
-    }
-  ],
   "contributes": {
     "sidebarItems": [
       {
