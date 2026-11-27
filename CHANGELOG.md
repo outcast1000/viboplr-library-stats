@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.8.0
+- **Map tab: your artists laid out by sound.** Every artist with genre tags sits near the artists whose tags match theirs, grouped into named neighbourhoods (k-means over the tags, weighted so a rare tag counts for more than "rock"). Similar artists Last.fm already gave Vibo pull pairs closer; the build only reads what is cached and fetches nothing. Click an artist for its tags and neighbourhood and to open its page; right-click for the usual artist menu. Built on demand (**Build map**) and kept until you rebuild.
+- Size dots by plays or by tracks, show every Last.fm link at once, and jump between an artist's closest neighbours from its card. "Reading the map" notes say what the map can't tell you (untagged artists, generic tags, unreadable tags).
+- Settings → Map: an off-by-default option to keep artists whose names are written in Greek together, and a Build / Rebuild button.
+- The Map tab needs Viboplr 1.0.125 (its `scatter-map` view); older versions don't show it, and everything else works as before. No `minAppVersion` bump.
+
 ## v1.7.2
 - Each permission now says why the plugin needs it, shown under it when Viboplr asks. No functional changes.
 
